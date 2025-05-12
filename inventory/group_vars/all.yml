@@ -16,9 +16,9 @@ deployment_user: ofn-deploy
 ssh_pubkey: "{{ lookup('file', '~/.ssh/{{ ssh_pubkey_name }}') }}"
 
 # You can paste the repo/branch straight from a github PR here, like: "Contributor22:new_feature"
-github_key: openfoodfoundation:master
+github_key: grownhere:grownhere-main
 
-git_repo: "https://github.com/{{ github_key.split(':')[0] }}/openfoodnetwork.git"
+git_repo: "https://github.com/{{ github_key.split(':')[0] }}/backend-ofn-fork.git"
 git_version: "{{ github_key.split(':')[1] }}"
 
 l10n_git_version: HEAD
@@ -73,7 +73,7 @@ multiredis_instances:
 db: openfoodnetwork
 db_user: ofn_user
 db_host: localhost
-postgres_encoding: en_US.utf8
+postgres_encoding: en_GB.utf8
 
 #----------------------------------------------------------------------
 # Postgresql variables
@@ -221,17 +221,8 @@ puma_timeout: 30
 # Core devs: users named here will have SSH access on all instances
 
 core_devs:
-  - maikel
-  - matt
-  - filipe
-  - david
-  - gaetan
-
-retired_core_devs:
-  - george
-  - pau
-  - stveep
-  - jb
+  - grownhere
+  - slothmock
 
 #----------------------------------------------------------------------
 # nginx config
