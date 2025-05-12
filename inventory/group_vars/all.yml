@@ -224,6 +224,12 @@ core_devs:
   - grownhere
   - slothmock
 
+retired_core_devs:
+  - george
+  - pau
+  - stveep
+  - jb
+
 #----------------------------------------------------------------------
 # nginx config
 
