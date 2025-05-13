@@ -273,4 +273,4 @@ ch_prod
 # GrownHere
 
 [grownhere]
-49.13.144.220 ansible_ssh_private_key_file=~/.ssh/id_rsa_slothmock
+grownhere.uk ansible_host=49.13.144.220 ansible_ssh_private_key_file=~/.ssh/id_rsa_slothmock
