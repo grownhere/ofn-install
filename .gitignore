@@ -6,4 +6,6 @@ community
 inventory/host_vars/*/secrets.yml
 *.log
 **/*.retry
-.idea/
+
+# Added due to API key
+playbooks/new_relic_infra.yaml
