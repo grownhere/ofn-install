@@ -1,9 +1,11 @@
 ---
 
-- name: disable maintenance mode
-  file:
-    dest: "/etc/nginx/maintenance.html"
-    state: absent
+- name: enable landing mode
+  template:
+    src: landing.html.j2
+    dest: "/etc/nginx/landing.html"
+    owner: www-data
+    group: www-data
   become: yes
   become_user: root
 

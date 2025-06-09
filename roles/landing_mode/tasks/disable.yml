@@ -1,8 +1,8 @@
 ---
 
-- name: disable maintenance mode
+- name: disable landing mode
   file:
-    dest: "/etc/nginx/maintenance.html"
+    dest: "/etc/nginx/landing.html"
     state: absent
   become: yes
   become_user: root
@@ -13,3 +13,4 @@
     state: reloaded
   become: yes
   become_user: root
+

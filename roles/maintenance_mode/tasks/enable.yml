@@ -8,3 +8,10 @@
     group: www-data
   become: yes
   become_user: root
+
+- name: Reload NGINX
+  service:
+    name: nginx
+    state: reloaded
+  become: yes
+  become_user: root

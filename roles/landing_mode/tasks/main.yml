@@ -1,0 +1,9 @@
+---
+
+- name: enable landing mode
+  import_tasks: enable.yml
+  when: disable_landing is undefined
+
+- name: disable landing mode
+  import_tasks: disable.yml
+  when: disable_landing is defined
