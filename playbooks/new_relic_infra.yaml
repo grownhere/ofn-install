@@ -1,0 +1,14 @@
+- name: Install New Relic infrastructure and logs
+  hosts: all
+  roles:
+    - role: newrelic.newrelic_install
+  vars:
+    targets:
+      - infrastructure
+      - logs
+      # See all available targets at: https://github.com/newrelic/ansible-install
+  environment:
+    NEW_RELIC_API_KEY: NRAK-YZ0OPA5CARR2V0RQRRI1M523FFV
+    NEW_RELIC_ACCOUNT_ID: "6744352"
+    NEW_RELIC_REGION: EU
+
