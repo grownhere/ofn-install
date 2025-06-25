@@ -1,7 +1,7 @@
 ---
 
 # User name and password for running ansible on host
-user: ofn-admin
+user: grownhere
 
 # User name for deployment
 deployment_user: ofn-deploy
@@ -25,8 +25,8 @@ l10n_git_version: HEAD
 
 #----------------------------------------------------------------------
 # Default values (should be overridden in each server config)
-rails_env: staging
-host_id: ofn-staging
+rails_env: production
+host_id: gh-prod
 admin_email: "admin@{{ domain }}"
 
 
@@ -222,13 +222,9 @@ puma_timeout: 30
 
 core_devs:
   - grownhere
-  - slothmock
 
 retired_core_devs:
-  - george
-  - pau
-  - stveep
-  - jb
+  - slothmock
 
 #----------------------------------------------------------------------
 # nginx config
@@ -278,7 +274,6 @@ nginx_sites:
       listen 80 default_server;
       listen [::]:80 default_server;
       server_name  _;
-      add_header X-Content-Type-Options nosniff always;
       add_header X-Xss-Protection "1; mode=block" always;
       add_header X-Frame-Options DENY always;
       add_header Content-Security-Policy "default-src none" always;
@@ -293,7 +288,6 @@ nginx_sites:
       listen [::]:80;
       server_name {{ certbot_domains | default([domain]) | join(' ') }};
 
-      add_header X-Content-Type-Options nosniff always;
       add_header X-Xss-Protection "1; mode=block" always;
 
       {{ nginx_acme_challenge_config }}
@@ -328,7 +322,6 @@ nginx_sites:
 
       {{ nginx_tls_cipher_suites }}
 
-      add_header X-Content-Type-Options nosniff always;
       add_header X-Xss-Protection "1; mode=block" always;
 
       gzip on;

@@ -16,7 +16,7 @@
     state: present
   when: ssh_key_path is defined
 
-- name: remove old ssh keys from ofn-admin
+- name: remove old ssh keys from grownhere user
   authorized_key:
     user: "{{ user }}"
     key: "{{ lookup('file', inventory_dir + '/../files/keys/' + item + '.pub') }}"
