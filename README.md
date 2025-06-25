@@ -1,12 +1,10 @@
 Deploying Open Food Network
 ===========================
 
-These are [Ansible](http://docs.ansible.com/ansible/) playbooks (scripts) for managing an Open Food Network app server. This is **not for your local development environment**. Head to the [OFN getting started guide](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/GETTING_STARTED.md) to run the OFN locally.
+These are [Ansible](http://docs.ansible.com/ansible/) playbooks (scripts) for managing an Open Food Network app server instance. This is **not for a local development environment**. Head to the [OFN getting started guide](https://github.com/openfoodfoundation/openfoodnetwork/blob/master/GETTING_STARTED.md) to run an OFN instance locally.
 
 ## Documentation
 See the [**wiki**](https://github.com/openfoodfoundation/ofn-install/wiki) for more information, including: additional setup, configuring, provisioning and deployment.
-
-For deploying OFN versions below `v4.x.x`, please use the `ofn-v3` branch of this repo.
 
 ## Playbooks
 
@@ -82,9 +80,3 @@ Run the [ansible-lint](https://github.com/willthames/ansible-lint) checks using:
 ```
 ansible-lint site.yml --exclude=community
 ```
-
-~~~This is also run in CI.~~~
-
-## Security
-
-This repository doesn't manage additional security configuration. The private repository `ofn-security` is used for servers managed by the OFN team.
