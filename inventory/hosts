@@ -34,4 +34,4 @@ grownhere_testing
 grownhere.uk ansible_host=91.99.174.236 ansible_ssh_private_key_file=~/.ssh/id_ed25519_grownhere
 
 [grownhere_testing]
-testing.grownhere.uk ansible_host=116.203.57.117 ansible_ssh_private_key_file=~/.ssh/id_ed25519_grownhere
+testing.grownhere.uk ansible_ssh_private_key_file=~/.ssh/id_ed25519_grownhere
