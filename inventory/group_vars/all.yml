@@ -16,7 +16,7 @@ deployment_user: ofn-deploy
 ssh_pubkey: "{{ lookup('file', '~/.ssh/{{ ssh_pubkey_name }}') }}"
 
 # You can paste the repo/branch straight from a github PR here, like: "Contributor22:new_feature"
-github_key: grownhere:grownhere-main
+github_key: grownhere:pre-release
 
 git_repo: "https://github.com/{{ github_key.split(':')[0] }}/backend-ofn-fork.git"
 git_version: "{{ github_key.split(':')[1] }}"
