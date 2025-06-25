@@ -2,7 +2,7 @@
 
 domain: testing.grownhere.uk
 host_id: grownhere-test # country initials (eg uk, es, de) and environment (default is prod)
-rails_env: production
+rails_env: development
 
 admin_email: admin@grownhere.uk
 mail_domain: grownhere.uk
