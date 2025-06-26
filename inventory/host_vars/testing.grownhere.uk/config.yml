@@ -5,7 +5,7 @@ host_id: grownhere-test # country initials (eg uk, es, de) and environment (defa
 rails_env: production
 
 admin_email: admin@grownhere.uk
-mail_domain: grownhere.uk
+mail_domain: testing.grownhere.uk
 
 certbot_domains:
   - testing.grownhere.uk

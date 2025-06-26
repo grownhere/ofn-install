@@ -322,6 +322,9 @@ nginx_sites:
 
       {{ nginx_tls_cipher_suites }}
 
+      auth_basic "Authorisation Required";
+      auth_basic_user_file /etc/nginx/.htpasswd;
+
       add_header X-Xss-Protection "1; mode=block" always;
 
       gzip on;
